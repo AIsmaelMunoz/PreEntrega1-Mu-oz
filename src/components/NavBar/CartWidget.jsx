@@ -1,7 +1,9 @@
+import { RiShoppingCartFill } from "react-icons/ri";
+
 const CartWidget = () => {
     return(
-        <div id="cartwidget">
-            <img src="./img/carrito.png" alt="carrito de compras" />
+        <div id="cartwidget" className="cartwidget">
+            <RiShoppingCartFill size={30} />
             4
         </div>
     )

@@ -9,7 +9,7 @@
 }
 
 
-#navbar{
+.navbar{
     background-color: aqua;
     color: black;
     display: flex;
@@ -22,7 +22,7 @@
     }
 }
 
-#cartwidget{
+.cartwidget{
     display: flex;
     justify-content: end;
     img{
