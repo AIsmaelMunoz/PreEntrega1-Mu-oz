@@ -27,7 +27,7 @@ const ItemListContainer = (props) => {
 
   console.log(props)
   return (
-    <div>
+    <div className="itemlistcontainer">
    
       <p>{props.greeting}</p>
       <ItemList productos={productos} />
