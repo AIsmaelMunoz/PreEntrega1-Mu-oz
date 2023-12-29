@@ -4,7 +4,7 @@ import './App.scss'
 import ItemCount from './components/ItemCount/ItemCount'
 import obtenerProductos from './utilidades/data'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {
 
@@ -18,6 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<ItemListContainer greeting={"Bienvenido a eCommers!"} />} />
          <Route path="/categorias/:categoria" element={<ItemListContainer greeting={"Bienvenido a eCommers!"} />}></Route>
+         <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
+         <Route path="*" element={<Navigate to="/" />}/>
       </Routes>
       </div>
    </BrowserRouter>
