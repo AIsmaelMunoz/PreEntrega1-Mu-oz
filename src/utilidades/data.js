@@ -1,5 +1,6 @@
 const productos = [
     {
+        categoria: "hombre",
         id: 'abc123',
         nombre: 'Remera',
         description:'asdasd',
@@ -8,6 +9,7 @@ const productos = [
         image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ2q9ovHgMKEUGu7vuhx102gZUxjiJbmPJrI7aK413XnyM5k9CJfXqQ8DDu79BEAzLBUrBWPJbwHLIp499LaFYtGp6DRCkDUkrsQx15Qledd6Bwe7i9pakj6vU&usqp=CAE',
     },
     {
+        categoria: "mujer",
         id: 'abc456',
         nombre: 'Pantalon',
         description:'asdasd',
@@ -16,6 +18,7 @@ const productos = [
         image: 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ8_eNViAS9rCVLJsdCiQ4DmbYozSRQYW25XEQuNpwbOdiJa9WsBpaSXTToQoZww0twxoENh49rvlovJzAz7oV0ZMxI3eYqTihPT-rKchM6QjacsmWgyrwW&usqp=CAE',
     },
     {
+        categoria: "hombre",
         id: 'abc789',
         nombre: 'Campera',
         description:'asdasd',

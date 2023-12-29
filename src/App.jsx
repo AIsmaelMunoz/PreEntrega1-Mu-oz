@@ -3,18 +3,24 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import './App.scss'
 import ItemCount from './components/ItemCount/ItemCount'
 import obtenerProductos from './utilidades/data'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
   
 
   return (
-   <div id='app' className='app'>
+    <BrowserRouter>
+      <div id='app' className='app'>
       < NavBars/>
-      <ItemCount stock={10}/>
-      <ItemListContainer greeting={"Bienvenido a eCommers!"} />
 
-   </div>
+      <Routes>
+        <Route path="/" element={<ItemListContainer greeting={"Bienvenido a eCommers!"} />} />
+         <Route path="/categorias/:categoria" element={<ItemListContainer greeting={"Bienvenido a eCommers!"} />}></Route>
+      </Routes>
+      </div>
+   </BrowserRouter>
   )
 }
 
