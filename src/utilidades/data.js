@@ -2,6 +2,7 @@ const productos = [
     {
         categoria: "hombre",
         id: 'abc123',
+        stock: '20',
         nombre: 'Remera',
         description:'asdasd',
         precio: 12000,
@@ -11,6 +12,7 @@ const productos = [
     {
         categoria: "mujer",
         id: 'abc456',
+        stock: '34',
         nombre: 'Pantalon',
         description:'asdasd',
         precio: 20000,
@@ -20,6 +22,7 @@ const productos = [
     {
         categoria: "hombre",
         id: 'abc789',
+        stock: '15',
         nombre: 'Campera',
         description:'asdasd',
         precio: 25000,
