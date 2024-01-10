@@ -5,6 +5,9 @@ import ItemCount from './components/ItemCount/ItemCount'
 import obtenerProductos from './utilidades/data'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { CartProvider } from './context/CartContext'
+import Carrito from './components/Carrito/Carrito'
+
 
 function App() {
 
@@ -12,16 +15,20 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div id='app' className='app'>
-      < NavBars/>
+      <CartProvider>
 
-      <Routes>
-        <Route path="/" element={<ItemListContainer greeting={"Bienvenido a eCommers!"} />} />
-         <Route path="/categorias/:categoria" element={<ItemListContainer greeting={"Bienvenido a eCommers!"} />}></Route>
-         <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
-         <Route path="*" element={<Navigate to="/" />}/>
-      </Routes>
-      </div>
+        < NavBars/>
+
+        <Routes>
+          <Route path="/" element={<ItemListContainer greeting={"Bienvenido a eCommers!"} />} />
+          <Route path="/categorias/:categoria" element={<ItemListContainer greeting={"Bienvenido a eCommers!"} />}></Route>
+          <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
+          <Route path="*" element={<Navigate to="/" />}/>
+          <Route path="/carrito" element={<Carrito/>}></Route>
+        </Routes>
+
+      </CartProvider>
+
    </BrowserRouter>
   )
 }

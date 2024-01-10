@@ -9,10 +9,10 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = (props) => {
 
   const [productos, setProductos] = useState([])
-  console.log('render')
+  //console.log('render')
 
   const { categoria } = useParams()
-  console.log(categoria)
+  //console.log(categoria)
 
   useEffect(()=>{
     obtenerProductos
@@ -24,16 +24,16 @@ const ItemListContainer = (props) => {
       setProductos(respuesta)
     })
     .catch((error)=>{
-      console.log(error);
+      //console.log(error);
     })
     .finally(()=>{
-      console.log('finalizo la promise')
+      //console.log('finalizo la promise')
     })
   }, [categoria])
 
 
 
-  console.log(props)
+  //console.log(props)
   return (
     <div className="itemlistcontainer">
    
