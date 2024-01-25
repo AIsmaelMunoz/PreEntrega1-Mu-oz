@@ -15,7 +15,7 @@ const Item = ({ producto }) => {
               <p>{producto.description}</p>
               <li>${producto.precio}</li>
               <li>{producto.talle}</li>
-              <Link to={`/detalle/${producto.id}`}>Ver detalles</Link>
+              <Link className='detalleCard' to={`/detalle/${producto.id}`}>Ver detalles</Link>
             </div>
         </article>
       }

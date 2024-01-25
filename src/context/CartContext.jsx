@@ -31,6 +31,10 @@ const CartProvider = ( {children} )=>{
         return carrito.reduce((total, producto)=> total + producto.cantidad , 0)
     }
 
+    const totalPrecio = ()=>{
+        return carrito.reduce((total, producto)=> total + (producto.cantidad * producto.precio) , 0)
+    }
+
     const borrarCarrito = ()=>{
         setCarrito([])
     }
@@ -39,7 +43,7 @@ const CartProvider = ( {children} )=>{
         setCarrito(productosFiltrados)
     }
     return(
-        <CartContext.Provider value={{carrito, añadirProducto, totalCantidad, borrarCarrito, borrarProd}}>
+        <CartContext.Provider value={{carrito, añadirProducto, totalCantidad, borrarCarrito, borrarProd, totalPrecio}}>
             {children}
         </CartContext.Provider>
     )
