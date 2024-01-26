@@ -29,6 +29,9 @@ const Carrito = () => {
       </ul>
         <h3>Total de tu compra: ${totalPrecio()}</h3>
       <button onClick={borrarCarrito}>Eliminar carrito</button>
+      <Link to="/checkout">
+        Continuar compra
+      </Link>
     </div>
   );
 };
